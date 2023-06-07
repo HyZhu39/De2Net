@@ -1,4 +1,4 @@
-# De2Net 
+# De2Net  
 
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg?style=plastic)
 ![pytorch 1.7.0](https://img.shields.io/badge/pytorch-1.7.0-green.svg?style=plastic)
