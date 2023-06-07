@@ -68,13 +68,13 @@ We provide quick test code with the pretrained model.
    ./options/test/ZTE_test_real_data.yml
    ```
 
-3. Run test code for **synthetic** data of  **ZTE**  dataset.
+3. Run test code for *synthetic* data of  **ZTE**  dataset.
 
    ```bash
    python -u basicsr/test.py -opt "options/test/ZTE_test.yml" --launcher="none"
    ```
 
-4. Run test code for **real** data of  **ZTE**  dataset.
+4. Run test code for *real* data of  **ZTE**  dataset.
 
    ```bash
    python -u basicsr/test.py -opt "options/test/ZTE_test_real_data.yml" --launcher="none"
