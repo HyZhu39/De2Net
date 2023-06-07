@@ -1,0 +1,118 @@
+# Modified SRResNet w/o BN from:
+# Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network
+
+# general settings
+name: TOLED_train
+model_type: TOLEDTrainModel
+scale: 1
+num_gpu: 2
+manual_seed: 10
+
+# dataset and data loader settings
+datasets:
+  train:
+    name: syn_pair_train
+    type: OLEDTrainDataset
+    filename_tmpl: '{}'
+    io_backend:
+      type: disk
+
+    dataroot_lq: path/to/your/Dataset/UDC_real_data/Real_data/Toled_train/LQ
+    dataroot_gt: path/to/your/Dataset/UDC_real_data/Real_data/Toled_train/HQ
+
+    gt_size: 256
+    use_flip: true
+    use_rot: true
+
+    # data loader
+    use_shuffle: true
+    num_worker_per_gpu: 2  # per GPU
+    batch_size_per_gpu: 2
+    dataset_enlarge_ratio: 80
+    prefetch_mode: cuda
+    pin_memory: true
+
+  val:
+    name: syn_val_rot5
+    type: OLEDTestDataset
+    input_udc_key: test_display
+    gt_udc_key: test_gt
+
+    test_input_path: path/to/your/Dataset/UDC_real_data/mat/toled_test_display.mat
+    test_gt_path: path/to/your/Dataset/UDC_real_data/mat/toled_test_gt.mat
+
+# network structures
+network_g:
+  type: TOLED
+  in_nc: 3
+  out_nc: 3
+  nf: 32
+  ns: 64
+  kernel_cond: img
+  psf_nc: 5
+  kpn_sz: 15
+  bilinear_sz: 7  # bilinear_sz=2*dilation_sz-1
+  dilation_sz: 4
+  kpn_sz_center: 5
+  basis_num: 90
+  multi_scale: false
+  final_kernel: true
+  croped_ksz: 61
+  wiener_level: 1
+
+# path
+path:
+  pretrain_model_g: ~
+  strict_load: true
+  resume_state: ~
+
+# training settings
+train:
+  optim_g:
+    type: Adam
+    lr: !!float 1e-4
+    weight_decay: 0
+    betas: [0.9, 0.99]
+
+  scheduler:
+    type: CosineAnnealingRestartLR
+    periods: [400000, 400000, 400000, 400000, 400000]
+    restart_weights: [1, 1, 1, 1, 1]
+    eta_min: !!float 1e-7
+
+  total_iter: 2000000
+  warmup_iter: -1  # no warm up
+
+  # losses
+  pixel_opt:
+    type: L1Loss
+    loss_weight: !!float 1.0
+    reduction: mean
+
+  accumulation_steps: 1  # if don't need it, set it to 1, if accumulation_steps != 1, should let scheduler,total_iter multiply accumulation_steps
+
+# validation settings
+val:
+  val_freq: !!float 1e4
+  save_img: false
+
+  metrics:
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr_mat
+
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim_mat
+
+# logging settings
+logger:
+  print_freq: 100
+  save_checkpoint_freq: !!float 1e4
+  use_tb_logger: true
+  wandb:
+    project: ~
+    resume_id: ~
+
+# dist training settings
+dist_params:
+  backend: nccl
+  port: 29015
