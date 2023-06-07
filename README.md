@@ -7,7 +7,7 @@
 
 ![overall_structure](./asset/architecture.png)
 
-**Overview of our proposed De2Net .** Two main components are embedded into the backbone architecture, i.e., the feature-level Wiener deconvolution layer and the decomposed kernel prediction network.
+**Overview of our proposed De2Net .** Two main components are embedded into the backbone architecture, *i.e.*, the feature-level Wiener deconvolution layer and the decomposed kernel prediction network.
 
 
 
