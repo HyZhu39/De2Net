@@ -1,0 +1,72 @@
+name: ZTE_test_real
+suffix: ~  # add suffix to saved images
+model_type: ZTE_Model
+scale: 1
+crop_border: ~  # crop border when evaluation. If None, crop the scale pixels
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  test_1:
+    name: ZTE_real
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+      
+    folders:
+      rot_1:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/real_data/input
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/real_data/input
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/real_ZTE_list.txt
+
+# network structures
+network_g:
+  type: ZTE
+  in_nc: 3
+  out_nc: 3
+  nf: 32 # 
+  ns: 64
+  kernel_cond: img-psf
+  psf_nc: 5  #
+  kpn_sz: 15
+  bilinear_sz: 7  # bilinear_sz=2*dilation_sz-1
+  dilation_sz: 4
+  basis_num: 90
+  multi_scale: false
+  final_kernel: true
+  kpn_sz_center: 5
+  croped_ksz: 60
+  odd: true
+  mode: bilinear
+  wiener_level: 1
+
+# validation settings
+val:
+  save_img: true
+  save_npy: false
+  suffix: ~
+  
+  metrics: 
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+    lpips:
+      type: calculate_lpips_match
+
+# path
+path:
+  pretrain_model_g: path/to/your/code/models/ZTE.pth
+  strict_load: true
