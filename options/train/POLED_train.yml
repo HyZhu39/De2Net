@@ -38,8 +38,8 @@ datasets:
     input_udc_key: test_display
     gt_udc_key: test_gt
 
-    test_input_path: path/to/your/Dataset/UDC_real_data/mat/poled_test_display.mat
-    test_gt_path: path/to/your/Dataset/UDC_real_data/mat/poled_test_gt.mat
+    test_input_path: path/to/your/Dataset/UDC_real_data/mat/poled_val_display.mat
+    test_gt_path: path/to/your/Dataset/UDC_real_data/mat/poled_val_gt.mat
 
 # network structures
 network_g:
