@@ -43,11 +43,7 @@
 
 ## Dataset Preparation
 
-You can grab the data directly from [GoogleDrive](), unzip and put them into `./dataset`.
-
-Alternatively, you can also grab the data from [BaiduDrive](https://pan.baidu.com/s/1Y1rlRlZ-tYKPMuMT3zsSsQ?pwd=D2NT).
-
-Please see [Dataset.md](./Dataset.md) for details.
+To grab datasets we used, Please see [Dataset.md](./Dataset.md) for details.
 
 Our pretrained models are released on [GoogleDrive](https://drive.google.com/file/d/1rDOBpeZZKlBiwSZ7J4m01DfSTmYLFaFU/view?usp=drive_link) or [BaiduDrive](https://pan.baidu.com/s/1xoJhrgfI3g-1s10VR4ND0w?pwd=D2NT).
 

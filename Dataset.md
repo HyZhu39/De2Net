@@ -50,8 +50,6 @@ We used three different datasets for our work as benchmarks: **ZTE**、**T-OLED*
     python data_scripts/download_dataset.py --dataset=UDC
     ```
 
-    Alternatively, you can also download the data directly from [GoogleDrive]() or [BaiduDrive](https://pan.baidu.com/s/1Y1rlRlZ-tYKPMuMT3zsSsQ?pwd=D2NT), unzip and put them into `./dataset`.
-
 1. Generating synthetic data by apply convolution with PSF for UDC simulation:
 
     ```bash
@@ -64,10 +62,10 @@ We used three different datasets for our work as benchmarks: **ZTE**、**T-OLED*
     python data_scripts/generate_info_list.py --data_path=. --psf_type=ZTE_new --save_dir=./PSF/kernel_info_list
     ```
 
+You can download the dataset and reference their official tutorial [here](https://github.com/jnjaby/DISCNet/blob/main/datasets/README.md) for details.
+
 **T-OLED** and **P-OLED**:
 
 Download and unzip datasets into `./dataset`.
 
-
-
-You can download the data directly from [GoogleDrive]() or [BaiduDrive](https://pan.baidu.com/s/1Y1rlRlZ-tYKPMuMT3zsSsQ?pwd=D2NT), unzip and put them into `./dataset`.
+You can download the dataset from this [link](https://rlq-tod.github.io/challenge2.html).
