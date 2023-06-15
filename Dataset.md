@@ -69,3 +69,7 @@ You can download the dataset and reference their official tutorial [here](https:
 Download and unzip datasets into `./dataset`.
 
 You can download the dataset from this [link](https://rlq-tod.github.io/challenge2.html).
+
+
+
+After downloading the datasets, please modify the dataset path settings of the yaml files in `.options` accordingly, you can refer to the file structure we proposed in the **Overview** section.
