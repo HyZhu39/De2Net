@@ -109,7 +109,7 @@ class ZTE_Dataset(data.Dataset):
         lq_path = self.paths[index]['lq_path']
         psf_path = self.paths[index]['psf_path']
 
-        kernel_path = psf_path.replace('_code_','_psf_')
+        kernel_path = psf_path.replace('kernel_code','ZTE_new').replace('_code_','_psf_')
         img_gt = self.file_client.get(gt_path)
         img_lq = self.file_client.get(lq_path)
         psf_code = self.file_client.get(psf_path)
