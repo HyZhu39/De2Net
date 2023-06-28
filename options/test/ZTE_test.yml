@@ -1,0 +1,213 @@
+name: ZTE_test
+suffix: ~  # add suffix to saved images
+model_type: ZTE_Model
+scale: 1
+crop_border: ~  # crop border when evaluation. If None, crop the scale pixels
+num_gpu: 1
+manual_seed: 10
+
+datasets:
+  test_1:
+    name: syn_val_new_1
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_1:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_1/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_1_test.txt
+  test_2:
+    name: syn_val_new_2
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_2:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_2/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_2_test.txt
+  test_3:
+    name: syn_val_new_3
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_3:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_3/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_3_test.txt
+  test_4:
+    name: syn_val_new_4
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_4:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_4/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_4_test.txt
+  test_5:
+    name: syn_val_new_5
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_5:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_5/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_5_test.txt
+  test_6:
+    name: syn_val_new_6
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_6:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_6/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_6_test.txt
+  test_7:
+    name: syn_val_new_7
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_7:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_7/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_7_test.txt
+  test_8:
+    name: syn_val_new_8
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_8:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_8/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_8_test.txt
+  test_9:
+    name: syn_val_new_9
+    type: ZTE_Dataset
+    lq_map_type: simple
+    gt_map_type: simple
+    
+    psf_kz: 60
+    odd: true
+    mode: bilinear
+    wiener_level: 1
+    
+    io_backend:
+      type: npy
+    folders:
+      rot_9:
+        dataroot_lq: path/to/your/Dataset/UDC_syn_data/synthetic_data/input/ZTE_new_9/test/
+        dataroot_gt: path/to/your/Dataset/UDC_syn_data/synthetic_data/GT/test/
+        meta_info_file: path/to/your/Dataset/UDC_syn_data/PSF/kernel_info_list/ZTE_new/ZTE_new_code_9_test.txt
+
+# network structures
+network_g:
+  type: ZTE
+  in_nc: 3
+  out_nc: 3
+  nf: 32
+  ns: 64
+  kernel_cond: img-psf
+  psf_nc: 5
+  kpn_sz: 15
+  bilinear_sz: 7
+  dilation_sz: 4
+  basis_num: 90
+  multi_scale: false
+  final_kernel: true
+  kpn_sz_center: 5
+  croped_ksz: 60
+  odd: true
+  mode: bilinear
+  wiener_level: 1
+
+# validation settings
+val:
+  save_img: true
+  save_npy: false
+  suffix: ~
+  
+  metrics: 
+    psnr: # metric name, can be arbitrary
+      type: calculate_psnr
+      crop_border: 0
+      test_y_channel: false
+    ssim: # metric name, can be arbitrary
+      type: calculate_ssim
+      crop_border: 0
+      test_y_channel: false
+
+# path
+path:
+  pretrain_model_g: path/to/your/code/pretrained_models/ZTE.pth
+  strict_load: true
