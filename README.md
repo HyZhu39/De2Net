@@ -119,15 +119,15 @@ All logging files in the training process, *e.g.*, log message, checkpoints, and
 ## Results
 
 <img src="asset/ZTE_syn.png" alt="ZTE_syn_result" style="zoom:120%;" />
-Result on *synthetic* data of **ZTE** dataset.
+Results on *synthetic* data of **ZTE** dataset.
 
 ![ZTE_real_result](asset/ZTE_real.png)
-Result on *real* data of **ZTE** dataset.
+Results on *real* data of **ZTE** dataset.
 
 ![TOLED](./asset/TOLED.png)
 
-Result on of **T-OLED** dataset.
+Results on of **T-OLED** dataset.
 
 ![POLED](./asset/POLED.png)
 
-Result on of **P-OLED** dataset.
+Results on of **P-OLED** dataset.
