@@ -45,7 +45,7 @@
 
 To grab datasets we used, Please see [Dataset.md](./Dataset.md) for details.
 
-Our pretrained models are released on [GoogleDrive](https://drive.google.com/file/d/1rDOBpeZZKlBiwSZ7J4m01DfSTmYLFaFU/view?usp=drive_link) or [BaiduDrive](https://pan.baidu.com/s/1xoJhrgfI3g-1s10VR4ND0w?pwd=D2NT).
+Our pretrained models are released on [GoogleDrive](https://drive.google.com/file/d/1q0hqKJBArmovmj0pd3L6yIsVYZfPc54i/view?usp=sharing) or [BaiduDrive](https://pan.baidu.com/s/1rUfOwWRwimrA_iPJo39M3w?pwd=D2NT).
 
 
 
@@ -119,15 +119,15 @@ All logging files in the training process, *e.g.*, log message, checkpoints, and
 ## Results
 
 <img src="asset/ZTE_syn.png" alt="ZTE_syn_result" style="zoom:120%;" />
-Results on *synthetic* data of **ZTE** dataset.
+Result on *synthetic* data of  **ZTE** dataset.
 
 ![ZTE_real_result](asset/ZTE_real.png)
-Results on *real* data of **ZTE** dataset.
+Result on *real* data of **ZTE** dataset.
 
 ![TOLED](./asset/TOLED.png)
 
-Results on of **T-OLED** dataset.
+Result on of **T-OLED** dataset.
 
 ![POLED](./asset/POLED.png)
 
-Results on of **P-OLED** dataset.
+Result on of **P-OLED** dataset.
